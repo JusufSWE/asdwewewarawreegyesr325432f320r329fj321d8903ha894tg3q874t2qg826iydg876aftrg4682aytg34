@@ -65,6 +65,27 @@ function playSong(index) {
     li.classList.toggle("active", i === index);
   });
 
+  // Välilyönti play/pause vain, jos musiikkisoitin on aktiivinen
+  document.addEventListener("keydown", function(e) {
+  // 32 = Space
+  if (e.code === "Space") {
+    e.preventDefault(); // estetään sivun scrollaus
+
+    // Tarkistetaan, onko musiikkisoitin aktiivinen elementti
+    const player = document.getElementById("music-player");
+    const active = document.activeElement;
+
+    // Jos fokus on musiikkisoittimessa tai sen lapset-elementeissä
+    if (player.contains(active)) {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+    }
+    }
+    }
+    });
+
   // Media Session API, lockscreen painikkeet
   if ("mediaSession" in navigator) {
     navigator.mediaSession.metadata = new MediaMetadata({
