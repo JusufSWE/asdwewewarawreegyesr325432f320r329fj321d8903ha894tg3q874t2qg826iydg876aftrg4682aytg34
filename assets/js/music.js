@@ -1,7 +1,7 @@
 // Musiikkisoitin JS
 
 // Polku kansioon, johon lisäät mp3-tiedostot
-const musicPath = "music";
+const musicPath = "../../music";
 
 // DOM-elementit
 const audio = document.getElementById("audio-player");
