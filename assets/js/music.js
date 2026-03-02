@@ -21,9 +21,9 @@ async function loadMusic() {
     // Tässä oletetaan, että kaikki tiedostot lisätään manuaalisesti arrayhin:
     
     // Esimerkki automaattisesta hausta, jos käytät GitHub APIa:
-    const user = "YOUR_USERNAME";
-    const repo = "YOUR_REPO";
-    const path = "docs/music"; // jos music-kansio docsissa
+    const user = "JusufSWE";
+    const repo = "asdwewewarawreegyesr325432f320r329fj321d8903ha894tg3q874t2qg826iydg876aftrg4682aytg34";
+    const path = "music"; // jos music-kansio docsissa
     const url = `https://api.github.com/repos/${user}/${repo}/contents/${path}`;
 
     const response = await fetch(url);
